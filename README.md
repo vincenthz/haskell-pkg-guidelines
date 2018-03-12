@@ -78,7 +78,7 @@ Package COULD also support:
 * 32 bit i386
 * 32/64 bit ARM
 
-Any other architecture is unsupported, but will possibly works
+Any other architecture is unsupported, but will possibly work
 with architecture independent code.
 
 ### Missing support & Rationale
