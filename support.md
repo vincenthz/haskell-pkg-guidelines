@@ -2,11 +2,12 @@
 
 ### Haskell compiler
 
-supported Haskell GHC 8.0.x, 8.2.x, 8.4.x:
+supported Haskell GHC 8.0.x, 8.2.x, 8.4.x, 8.6.x:
 
 * GHC 8.0 (May 2016)
 * GHC 8.2 (Jul 2017)
 * GHC 8.4 (Mar 2018)
+* GHC 8.6 (Aug 2018)
 
 Not supported anymore:
 
