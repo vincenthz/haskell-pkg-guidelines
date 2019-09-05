@@ -2,15 +2,16 @@
 
 ### Haskell compiler
 
-supported Haskell GHC 8.0.x, 8.2.x, 8.4.x, 8.6.x:
+supported Haskell 8.4.x, 8.6.x, 8.8.x:
 
-* GHC 8.0 (May 2016)
-* GHC 8.2 (Jul 2017)
 * GHC 8.4 (Mar 2018)
 * GHC 8.6 (Aug 2018)
+* GHC 8.8 (Aug 2019)
 
 Not supported anymore:
 
+* GHC 8.2 (Jul 2017)
+* GHC 8.0 (May 2016)
 * GHC 7.10 (Apr 2015)
 * GHC 7.8 (Apr 2014)
 * Older GHCs
@@ -19,7 +20,7 @@ Libraries can be effectively gated against older GHCs using
 in .cabal file:
 
 ```
-if impl(ghc < 8.0)
+if impl(ghc < 8.4)
   Buildable: False
 else
   build-depends: base
@@ -29,7 +30,7 @@ or in hpack format:
 
 ```
 when:
-  - condition: "impl(ghc < 8.0)"
+  - condition: "impl(ghc < 8.4)"
     then:
       buildable: False
     else:
@@ -43,18 +44,21 @@ Package SHOULD be operating system independent if possible.
 supported:
 
 * Windows:
-  * 8 (Aug 2012), 8.1
   * 10 (July 2015)
 * Mac OS:
   * 10.10 Yosemite (Jun 2014)
   * 10.11 El Capitan (Jun 2015)
   * 10.12 Sierra (Jun 2016)
   * 10.13 High Sierra (Jun 2017)
+  * 10.14 Mojave (Sep 2018)
+  * 10.15 Catalina (Sep 2019)
 * Linux
 * BSDs (FreeBSD, NetBSD, OpenBSD)
 
 Not supported anymore:
 
+* Windows 8.1 (2013, mainstream support ended January 2018)
+* Windows 8 (2012, unsupported)
 * Windows Vista (2007, support ended)
 * Windows 7 (2009, support ended)
 * Older Windows
